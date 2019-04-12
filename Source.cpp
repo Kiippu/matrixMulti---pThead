@@ -4,11 +4,12 @@
 #include "MultiplicationHelper.h"
 #include "Matrix.h"
 
-// global man min and row col values used for testing
+// global man min and row col values used for test
+/// change these to change all test values
 USHORT MAX_VALUE = 1;
 USHORT MIN_VALUE = 1;
-USHORT ROW_LENGTH = 500;
-USHORT COL_LENGTH = 500;
+USHORT ROW_LENGTH = 10;
+USHORT COL_LENGTH = 10;
 
 // all matrix objects
 std::shared_ptr<Matrix> matrix_final0 = std::make_shared<Matrix>();
@@ -125,11 +126,10 @@ int main()
 	}
 
 	// call Helpers with associated matrix multiplication
-	/// UNCOMMENT to test each with glboal values at top of file
 	mathHelper0.multiplyMatrix();
-	//mathHelper1.multiplyMatrix_thread0();
-	//mathHelper2.multiplyMatrix_thread1();
-	//mathHelper3.multiplyMatrix_thread2();
+	mathHelper1.multiplyMatrix_thread0();
+	mathHelper2.multiplyMatrix_thread1();
+	mathHelper3.multiplyMatrix_thread2();
 
 	// pause application
 	int pausePlease;
