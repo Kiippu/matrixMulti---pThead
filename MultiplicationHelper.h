@@ -2,6 +2,7 @@
 #include <memory>
 #include "GlobalTimer.h"
 #include "Matrix.h"
+#include <atomic>
 
 /*
 
@@ -31,6 +32,8 @@ private:
 	std::shared_ptr<Matrix> m_matrix_final;
 
 	GlobalTimer masterDelta;
+
+	unsigned m_threadCount;
 };
 
 // struct to pass in with nessecary data
@@ -41,4 +44,7 @@ struct threadArgs {
 	unsigned long i;
 	unsigned long j;
 	unsigned long k;
+	std::atomic<bool> m_completeFlag = false;
+
+	bool checkAtomic() { return m_completeFlag; }
 };

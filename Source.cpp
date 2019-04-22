@@ -8,8 +8,8 @@
 /// change these to change all test values
 USHORT MAX_VALUE = 1;
 USHORT MIN_VALUE = 1;
-USHORT ROW_LENGTH = 10;
-USHORT COL_LENGTH = 10;
+USHORT ROW_LENGTH = 100;
+USHORT COL_LENGTH = 100;
 
 // all matrix objects
 std::shared_ptr<Matrix> matrix_final0 = std::make_shared<Matrix>();
@@ -126,10 +126,11 @@ int main()
 	}
 
 	// call Helpers with associated matrix multiplication
-	mathHelper0.multiplyMatrix();
+	//mathHelper0.multiplyMatrix();
 	mathHelper1.multiplyMatrix_thread0();
-	mathHelper2.multiplyMatrix_thread1();
-	mathHelper3.multiplyMatrix_thread2();
+	//mathHelper2.multiplyMatrix_thread1();
+	//mathHelper3.multiplyMatrix_thread2();
+
 
 	// pause application
 	int pausePlease;
